@@ -1,0 +1,263 @@
+:root{
+    --background:rgba(0, 0, 255, 0.651);
+    font-size:2rem;
+    --color:#fb8500;
+    --second-color:#ffb703;
+}
+
+
+body{
+    background-color: whitesmoke;
+    /* background-color: rgba(128, 128, 128, 0.336); */
+}
+
+main{
+    max-width: 1023%;
+    width: 90%;
+    margin: auto;
+}
+.First_intro{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(200px , 1fr));
+    grid-auto-rows: 20px;
+    min-width: 100%;
+    grid-gap: 2px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.big{
+    grid-column: span 3;
+    grid-row: span 20;
+    background: url(IMAGE/Viva-2.jpg) center no-repeat ;
+    background-size: cover;
+}
+.second{
+    background: url(IMAGE/Food_S-2.jpg) center no-repeat;
+    background-size: cover;
+    grid-column: span 3;
+    grid-row: span 10;
+}
+.thrid{
+    background: url(IMAGE/Soap.jpg) center no-repeat;
+    background-size: cover;
+    grid-column: span 3;
+    grid-row: span 10;
+}
+
+@media screen and (max-width:768px) {
+    .First_intro{
+        display: grid;
+        grid-template-columns: repeat(auto-fit , minmax(150px , 1fr));
+        grid-auto-flow: dense;
+        grid-auto-rows: 20px;
+        min-width: 100%;
+    }
+    
+    .big{
+        background: url(IMAGE/IMG_20250430_105146_700.jpg) center no-repeat;
+        background-size: cover;
+        grid-column: span 1;
+        grid-row: span 10;
+    }
+    .second{
+        grid-column: span 1;
+        grid-row: span 5;
+    }
+    .thrid{
+        grid-column: span 1;
+        grid-row: span 5;
+    }
+}
+
+.contain{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.103);
+}
+.BISCUITES{
+    width: 15%;
+    font-size: 0.8rem;
+    margin-top: 19px;
+    background-color: var(--color);
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+.Selling_page{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+    gap: 4px;
+    grid-auto-flow: dense;
+    grid-auto-rows: 72px;
+    margin: 8px auto;
+    padding-bottom: 2px;
+    min-width: 100%;
+}
+
+.long{
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+    grid-row: span 4;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.long img{
+    width: 100%;
+    height: 33vh;
+    object-fit: cover;
+}
+.sales{
+    width: 6.1rem;
+}
+
+.short img{
+    width: 100%;
+    height: 20vh;
+    object-fit: cover;
+}
+.short{
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+    grid-row: span 3;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+ .longest{
+    grid-row: span 6;
+ }
+@media screen and (max-width:768px) {
+
+    .BISCUITES{
+        width: 40%;
+        font-size: 0.8rem;
+        margin-top: 19px;
+        background-color: var(--color);
+        text-align: center;
+    }
+    .Selling_page{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+        gap: 4px;
+        grid-auto-flow: dense;
+        grid-auto-rows: 72px;
+        margin-top: 8px;
+        padding-bottom: 2px;
+    }
+    
+    .long{
+        grid-row: span 4;
+    }
+    .sales{
+        width: 6.1rem;
+    }
+    
+    .short{
+        grid-row: span 3;
+    }
+    
+}
+
+.price_info{
+    width: 100%;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.price_info h3{
+    font-size: 0.7rem;
+    font-family: Roboto;
+}
+.price{
+    font-family: Roboto;
+    font-weight:600;
+    font-size: 20px;
+}
+/* . font-family: Roboto; */
+.ADDING{
+    width: 10px;
+    height: 10px;
+}
+.price_info button{
+    background-color: #fb8500;
+    border: #fb8500;
+    padding: 0.3rem;
+    border-radius: 10px;
+    font-family: roboto;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.price_info button:hover{
+    background-color: transparent;
+    border: darkblue 2px solid;
+    transform: translateX(-6px);
+}
+
+
+.Small_Price{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.Small_Price h3{
+    font-size: 20px;
+}
+.Small_Price p{
+    font-weight: 600;
+    font-style: italic;
+    font-size: 27px;
+}
+
+.Small_Price button{
+    background-color: #fb8500;
+    border: #fb8500;
+    padding: 0.3rem;
+    border-radius: 10px;
+    font-family: roboto;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.Small_Price button:hover{
+    background-color: darkblue;
+    border: darkblue 2px solid;
+    transform: translateX(-6px);
+    color: whitesmoke;
+}
+
+.see{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+.see div{
+    width: 110px;
+    height: 30px;
+    background-color: darkblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+    transition: 0.2s;
+}
+.see div:hover{
+    background: #fb8500;
+    color: black;
+}
+.MORE{
+    font-size: 16px;
+    font-weight: bold;
+}

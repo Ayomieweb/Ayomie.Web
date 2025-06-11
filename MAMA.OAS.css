@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+:root{
+    --background:rgba(0, 0, 255, 0.651);
+    font-size:2rem;
+    --color:#fb8500;
+    --second-color:#ffb703;
+}
+
+.Front_header{
+    min-width: 100%;
+    overflow: hidden;
+     /* background-color: rgba(169, 169, 169, 0.432);  */
+     margin-bottom: 10px;
+}
+
+nav{
+    height: 8vh;
+    background-color: rgba(0, 0, 139, 0.781);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    backdrop-filter: blur(20px);
+    position: sticky;
+    margin-top: 1px;
+    top: 0;
+}
+.Nav_links{
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 0.7rem;
+}
+
+.Nav_links a{
+    color:whitesmoke;
+}
+nav h2{
+    font-family: "Patua One", serif;
+    font-weight: 500;
+  }
+
+  .Cart-button{
+    padding: 0.2rem;
+    background-color: var(--color);
+    border: none;
+    border-radius: 4px;
+    font-family: Roboto;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  }
+  .burger{
+    display: none;
+  }
+    .burger div{
+        background-color:whitesmoke;
+        width: 25px;
+        height: 3px;
+        margin: 5px;
+        transition: all 0.3s ease-in;
+    }
+
+  @media screen and (max-width:768px) {
+    body{
+        overflow-x: hidden;
+    }
+    nav h2{
+    
+        font-family: Roboto;
+        font-weight: 500;
+        font-size: 1.4rem;
+        color: whitesmoke;
+      }
+    .Nav_links{
+        display: flex;
+        width: 50%;
+        height: 96vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 0.7rem;
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        background-color: rgba(0, 0, 139, 0.63);
+        backdrop-filter: blur(30px);
+        transform: translateX(100%);
+        transition: all 0.5s ease-in-out;
+    }
+    .burger{
+        display: block;
+      }
+
+      .Second-Body{
+        min-width: 100%;
+        min-height: 100vh;
+        flex-direction: column;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+      }
+  }
+
+  .nav_active{
+    transform: translateX(0%);
+  }
+
+  .toggle .line_1{
+    transform: rotate(-46deg) translate(-5px , 6px);
+  }
+  .toggle .line_2{
+    opacity: 0;
+  }
+  .toggle .line_3{
+    transform: rotate(46deg) translate(-5px , -6px);
+  }
+  /* end of navigaion container */
+
+  .Second-Body{
+    min-width: 100%;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  .MOAT{
+    height: 18.5rem;
+    animation: MA_IMG 3s ;
+  }
+  .Introduction{
+    font-size: 1.5rem;
+    animation: OAS 3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @keyframes OAS{
+    from{
+        transform: translateY(-200%);
+    }
+    to{
+        transform: translateY(0%);
+    }
+  }
+/* ////// */
+  @keyframes MA_IMG{
+    from{
+        transform: translateX(-200%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+  }
+
+
+  @media screen and (max-width:768px) {
+
+    .Second-Body{
+        min-width: 100%;
+        flex-direction: row;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+        flex-wrap: wrap;
+        overflow: hidden;
+        padding-top: 2rem;
+      }
+      
+    .image_b img{
+        height: 15rem;
+      }
+
+      .Introduction{
+        font-size: 1.3rem;
+      }
+  }
+
+  .Introduction p{
+    font-size: 15px;
+  }
+
+  .Introduction button{
+    margin-top: 7px;
+    padding: 0.3rem 0.7rem;
+    border-radius: 5px;
+    border: none;
+    background: var(--color);
+    font-family:"Patua One", serif;
+    font-weight: 600;
+    font-size: 0.6rem;
+    transition: 0.4s;
+    cursor: pointer;
+  }
+
+  .Introduction button:hover{
+    background-color: darkblue;
+    color: whitesmoke;
+  }
